@@ -1,9 +1,29 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+// Text color
+$bodyColor: white;
+
+// Background and navbar
+$backgroundColor: #222222;
+$navColor: #171717;
+
+// Accent colours
+$blue1: #2512B8;
+$blue2: #180A8A;
+$blue3: #0062EB;
+$orange1: #F5EADC;
+$orange2: #FF802E;
 
 body {
   background: $backgroundColor;
   color: $bodyColor;
   font-family: $bodyFont;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-dark {
+  background: $navColor;
 }

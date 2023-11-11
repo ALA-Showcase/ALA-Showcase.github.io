@@ -3,3 +3,19 @@ url: "https://ala-showcase.github.io" # the base hostname & protocol for your si
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "ALA Showcase" # the name of your site, e.g. ACME Corp.
 description: "Showcase website for the UTS Animal Logic Academy 2023 cohort"
+include:
+  - _pages
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename/
+navigation:
+  - title: Event
+    url: /
+  - title: Map
+    url: /map
+  - title: Artbook
+    url: /artbook
+  - title: Graduates
+    url: /graduates
