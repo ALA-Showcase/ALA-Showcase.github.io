@@ -4,8 +4,6 @@ title: "Home"
 permalink: /
 ---
 
-{% include navbar_top.html %}
-
 <div class="container mt-4">
 	<h1 class="mb-3">{{page.title}}</h1>
 	<div class="d-flex">
@@ -13,5 +11,3 @@ permalink: /
 	</div>
 	<a href="/graduates" class="btn btn-primary btn-graduates ala-font px-3 py-2 w-100">Graduates Page</a>
 </div>
-
-{% include navbar_bottom.html %}

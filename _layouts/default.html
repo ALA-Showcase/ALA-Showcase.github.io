@@ -19,6 +19,8 @@
 		<script async src="{{ "/assets/js/bootstrap.min.js" | relative_url }}"></script>
 	</head>
 	<body>
+		{% include navbar_top.html %}
 		{{ content }}
+		{% include navbar_bottom.html %}
 	</body>
 </html>

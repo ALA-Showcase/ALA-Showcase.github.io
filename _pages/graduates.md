@@ -3,8 +3,6 @@ layout: default
 title: "Graduates"
 ---
 
-{% include navbar_top.html %}
-
 <div class="container mt-4">
 	<h1 class="mb-3">{{page.title}}</h1>
 	<div class="row">
@@ -23,5 +21,3 @@ title: "Graduates"
 		{% endfor %}
 	</div>
 </div>
-
-{% include navbar_bottom.html %}
