@@ -23,3 +23,24 @@ navigation:
   - title: Graduates
     url: /graduates
     icon: fa-graduation-cap
+mapkey:
+  - name: Art
+    color: "#ff0000"
+  - name: Modelling
+    color: "#ff8c00"
+  - name: Surfacing
+    color: "#ffff00"
+  - name: Animation
+    color: "#00ff00"
+  - name: Lighting
+    color: "#00ffff"
+  - name: TDs
+    color: "#0088ff"
+  - name: Production
+    color: "#0000ff"
+  - name: Comp
+    color: "#9500ff"
+  - name: FX
+    color: "#ff00ff"
+  - name: Layout
+    color: "#ffffff"

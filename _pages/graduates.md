@@ -11,7 +11,7 @@ title: "Graduates"
 			<a href="{{ member.linkedin }}">
 				<div class="card text-white card-dark">
 					<div class="card-body">
-						<img src="/assets/images/avatar.png" class="p-3 w-50">
+						<img src="/assets/images/graduates/{{ member.image }}" class="p-3 w-75 rounded-circle">
 						<h5 class="card-title ala-font">{{ member.name }}</h5>
 						<p class="card-text">{{ member.first_pref }}</p>
 					</div>
