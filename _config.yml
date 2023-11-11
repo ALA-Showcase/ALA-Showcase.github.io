@@ -1,0 +1,5 @@
+domain: "ala-showcase.github.io"
+url: "https://ala-showcase.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "ALA Showcase" # the name of your site, e.g. ACME Corp.
+description: "Showcase website for the UTS Animal Logic Academy 2022 cohort"
