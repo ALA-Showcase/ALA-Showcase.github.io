@@ -1,0 +1,14 @@
+<!-- Stupid padding hack so the document isn't hidden behind the navbar -->
+<div class="m-4" style="height: 2rem;"></div>
+
+<nav class="navbar-dark navbar-bottom">
+	<div class="navbar-nav flex-row w-100">
+	{% for link in site.navigation %}
+		{% if page.url == link.url or (link.url != '/' and page.url contains link.url) %}
+			<a href="{{link.url}}" class="nav-link active fa {{link.icon}} w-100 text-center p-3" style="font-size: 2rem;" aria-hidden="true"></a>
+		{% else %}
+			<a href="{{link.url}}" class="nav-link fa {{link.icon}} w-100 text-center p-3" style="font-size: 2rem;" aria-hidden="true"></a>
+		{% endif %}
+	{% endfor %}
+	</div>
+</nav>

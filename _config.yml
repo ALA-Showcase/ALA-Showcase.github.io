@@ -13,9 +13,13 @@ defaults:
 navigation:
   - title: Event
     url: /
+    icon: fa-home
   - title: Map
     url: /map
+    icon: fa-map-marker
   - title: Artbook
     url: /artbook
+    icon: fa-paint-brush
   - title: Graduates
     url: /graduates
+    icon: fa-graduation-cap
