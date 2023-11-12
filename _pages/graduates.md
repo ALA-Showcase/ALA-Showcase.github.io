@@ -39,7 +39,7 @@ searchBar.addEventListener("input", (e) => {
 		const words = name.match(/\w+/g);
 
 		person.score = 0;
-		for (const i = 0; i < words.length; ++i) {
+		for (let i = 0; i < words.length; ++i) {
 			const word = words[i];
 			// startsWith is better than fuzzy search since it gives predictable results
 			// E.g. "Ru" matches "Ruben" instead of "Trung Hieu"
