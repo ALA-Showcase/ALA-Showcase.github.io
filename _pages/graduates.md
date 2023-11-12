@@ -29,11 +29,19 @@ document.getElementById("graduateSearch").addEventListener("input", function(e) 
 	const query = e.target.value.toLowerCase().trim();
 	let items = document.getElementsByClassName("search-item");
 	
-	// Filter graduates by name
 	for (let i = 0; i < items.length; ++i) {
 		const item = items[i];
+		// Get graduate name from aria-label
 		const name = item.getAttribute("aria-label").toLowerCase().trim();
-		item.style.display = name.startsWith(query) ? "block" : "none"
+		// startsWith is better than fuzzy search since it gives more predictable results
+		// E.g. "Ru" matches "Ruben" instead of Nathan's alternate name "Trung Hieu"
+		const name_match = name.startsWith(query);
+		// Also search for alternate names within brackets
+		// E.g. "Gogo (Yilang) Shi" matches both "Gogo" and "Yilang"
+		const alt_name = /\(([^)]+)\)/.exec(name);
+		const alt_match = alt_name && alt_name[1].startsWith(query);
+		// Hide non-matching items
+		item.style.display = (name_match || alt_match) ? "block" : "none";
 	}
 });
 </script>
