@@ -21,24 +21,3 @@ title: "Graduates"
 		{% endfor %}
 	</div>
 </div>
-
-<!-- Lazy load images, removed for now since it makes scrolling annoying -->
-<!--
-<script src="{{ "/assets/js/intersectionobserver_polyfill.js" | relative_url }}"></script>
-<script>
-// Lazy load profile pictures so this page doesn't take forever to load
-const observer = new IntersectionObserver(function(entries, observer) {
-	entries.forEach(function(entry) {
-		if (entry.isIntersecting) {
-			entry.target.src = entry.target.getAttribute("data-src");
-			observer.unobserve(entry.target);
-		}
-	});
-});
-
-const images = document.getElementsByClassName("lazy-load");
-for (let i = 0; i < images.length; ++i) {
-	observer.observe(images[i]);
-}
-</script>
--->
