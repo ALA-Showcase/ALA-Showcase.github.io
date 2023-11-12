@@ -2,3 +2,32 @@
 ---
 
 @import "base";
+
+a {
+  text-decoration: none;
+}
+
+.navbar-dark {
+  background: black;
+}
+
+.navbar-bottom {
+  background: black;
+  bottom: 0;
+  display: flex;
+  position: fixed;
+  width: 100%;
+}
+
+.card-dark {
+  background: $backgroundDarker;
+}
+
+h1, .ala-font {
+  font-family: "DIN";
+}
+
+#btn-graduates {
+  background: $blue3;
+  font-size: 1.5rem;
+}

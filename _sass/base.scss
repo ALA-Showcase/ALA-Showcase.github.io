@@ -1,5 +1,12 @@
 $bodyFont: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Open Sans", Arial, "Lucida Grande", sans-serif;
 
+@font-face {
+  font-family: "DIN";
+  src: url("/assets/fonts/dinweb-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 // Text color
 $bodyColor: white;
 
@@ -18,40 +25,4 @@ body {
   background: $backgroundColor;
   color: $bodyColor;
   font-family: $bodyFont;
-}
-
-a {
-  text-decoration: none;
-}
-
-.navbar-dark {
-  background: black;
-}
-
-.navbar-bottom {
-  background: black;
-  bottom: 0;
-  display: flex;
-  position: fixed;
-  width: 100%;
-}
-
-.card-dark {
-  background: $backgroundDarker;
-}
-
-h1, .ala-font {
-  font-family: "DIN";
-}
-
-.btn-graduates {
-  background: $blue3;
-  font-size: 1.5rem;
-}
-
-@font-face {
-  font-family: "DIN";
-  src: url("/assets/fonts/dinweb-bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
 }
