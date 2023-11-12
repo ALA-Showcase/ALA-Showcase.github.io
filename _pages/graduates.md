@@ -33,7 +33,7 @@ document.getElementById("graduateSearch").addEventListener("input", function(e) 
 	for (let i = 0; i < items.length; ++i) {
 		const item = items[i];
 		const name = item.getAttribute("aria-label").toLowerCase().trim();
-		item.style.display = name.indexOf(query) > -1 ? "block" : "none"
+		item.style.display = name.startsWith(query) ? "block" : "none"
 	}
 });
 </script>
