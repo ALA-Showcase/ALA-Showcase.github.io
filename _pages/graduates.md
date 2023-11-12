@@ -6,7 +6,7 @@ title: "Graduates"
 <div class="container mt-4">
 	<h1 class="mb-3">{{page.title}}</h1>
 	<input id="graduateSearch" type="search" class="form-control mb-2" placeholder="Search..." aria-label="Search">
-	<div class="row">
+	<div id="item-container" class="row">
 		{% for member in site.data.students %}
 		<div class="search-item col-md-4 p-2 text-center" aria-label="{{ member.name }}">
 			<a href="{{ member.linkedin }}">
@@ -24,24 +24,42 @@ title: "Graduates"
 </div>
 
 <script>
-document.getElementById("graduateSearch").addEventListener("input", function(e) {
+// No search bar is complete without an overengineered ranking system
+const searchBar = document.getElementById("graduateSearch");
+searchBar.addEventListener("input", (e) => {
 
 	const query = e.target.value.toLowerCase().trim();
-	let items = document.getElementsByClassName("search-item");
-	
-	for (let i = 0; i < items.length; ++i) {
-		const item = items[i];
-		// Get graduate name from aria-label
-		const name = item.getAttribute("aria-label").toLowerCase().trim();
-		// startsWith is better than fuzzy search since it gives more predictable results
-		// E.g. "Ru" matches "Ruben" instead of Nathan's alternate name "Trung Hieu"
-		const name_match = name.startsWith(query);
-		// Also search for alternate names within brackets
-		// E.g. "Gogo (Yilang) Shi" matches both "Gogo" and "Yilang"
-		const alt_name = /\(([^)]+)\)/.exec(name);
-		const alt_match = alt_name && alt_name[1].startsWith(query);
-		// Hide non-matching items
-		item.style.display = (name_match || alt_match) ? "block" : "none";
-	}
+	const people = Array.from(document.getElementsByClassName("search-item"));
+
+	people.forEach((person) => {
+		// Get names from aria-label
+		const name = person.getAttribute("aria-label").toLowerCase().trim();
+		// Split by words, e.g. "Hallam Roberts" => ["Hallam", "Roberts"]
+		const words = name.match(/\w+/g);
+
+		person.score = 0;
+		for (const i = 0; i < words.length; ++i) {
+			const word = words[i];
+			// startsWith is better than fuzzy search since it gives predictable results
+			// E.g. "Ru" matches "Ruben" instead of "Trung Hieu"
+			if (word.startsWith(query)) {
+				// Rank based on how close the word is to the start of the name
+				// E.g. "R" orders "Ruben Luzaic" before "Hallam Roberts"
+				person.score += 1 - ((i + 1) / words.length);
+			}
+		}
+
+		// Hide non-matching results
+		person.style.display = person.score === 0 ? "none" : "block";
+	});
+
+	const container = document.getElementById("item-container");
+	people.sort((a, b) => {
+		const diff = b.score - a.score;
+		// Sort alphabetically when names have the same score
+		return diff === 0
+			? a.getAttribute("aria-label").localeCompare(b.getAttribute("aria-label"))
+			: diff;
+	}).forEach(elem => container.appendChild(elem));
 });
 </script>
