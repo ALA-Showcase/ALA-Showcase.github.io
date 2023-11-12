@@ -3,44 +3,64 @@ url: "https://ala-showcase.github.io" # the base hostname & protocol for your si
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "ALA Showcase" # the name of your site, e.g. ACME Corp.
 description: "Showcase website for the UTS Animal Logic Academy 2023 cohort"
+
 include:
   - _pages
+
 defaults:
   - scope:
       path: '_pages'
     values:
       permalink: /:basename/
+
 navigation:
   - title: Event
     url: /
-    icon: fa-home
+    icon: bi-house-door
+    active: bi-house-door-fill
+
   - title: Map
     url: /map
-    icon: fa-map-marker
+    icon: bi-geo-alt
+    active: bi-geo-alt-fill
+
   - title: Artbook
     url: /artbook
-    icon: fa-paint-brush
+    icon: bi-palette
+    active: bi-palette-fill
+
   - title: Graduates
     url: /graduates
-    icon: fa-graduation-cap
+    icon: bi-mortarboard
+    active: bi-mortarboard-fill
+
 mapkey:
   - name: Art
     color: "#ff0000"
+
   - name: Modelling
     color: "#ff8c00"
+
   - name: Surfacing
     color: "#ffff00"
+
   - name: Animation
     color: "#00ff00"
+
   - name: Lighting
     color: "#00ffff"
+
   - name: TDs
     color: "#0088ff"
+
   - name: Production
     color: "#0000ff"
+
   - name: Comp
     color: "#9500ff"
+
   - name: FX
     color: "#ff00ff"
+
   - name: Layout
     color: "#ffffff"
