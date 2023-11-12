@@ -11,7 +11,7 @@ title: "Graduates"
 			<a href="{{ member.linkedin }}">
 				<div class="card text-white card-dark">
 					<div class="card-body">
-						<img data-src="/assets/images/graduates/{{ member.image }}" class="lazy-load p-3 w-75 rounded-circle">
+						<img src="/assets/images/graduates/{{ member.image }}" loading="lazy" class="p-3 w-75 rounded-circle">
 						<h5 class="card-title ala-font">{{ member.name }}</h5>
 						<p class="card-text">{{ member.first_pref }}</p>
 					</div>
@@ -22,6 +22,8 @@ title: "Graduates"
 	</div>
 </div>
 
+<!-- Lazy load images, removed for now since it makes scrolling annoying -->
+<!--
 <script src="{{ "/assets/js/intersectionobserver_polyfill.js" | relative_url }}"></script>
 <script>
 // Lazy load profile pictures so this page doesn't take forever to load
@@ -39,3 +41,4 @@ for (let i = 0; i < images.length; ++i) {
 	observer.observe(images[i]);
 }
 </script>
+-->
