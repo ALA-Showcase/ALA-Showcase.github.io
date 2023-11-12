@@ -9,7 +9,7 @@ title: "Map"
 	<h3 class="ala-font">Legend</h3>
 	<div class="row">
 		{% for item in site.mapkey %}
-		<div class="col-5 m-1">
+		<div class="col-5 m-1" style="font-size: 1.1rem;">
 			<i class="bi bi-circle-fill" style="color: {{item.color}};" aria-hidden="true"></i>
 			<span class="ms-2">{{ item.name }}</span>
 		</div>
