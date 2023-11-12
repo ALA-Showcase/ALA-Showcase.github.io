@@ -20,7 +20,12 @@ a {
 }
 
 .card-dark {
+  transition: background 0.15s;
   background: $backgroundDarker;
+}
+
+.card-dark:hover {
+  background: $backgroundLighter;
 }
 
 h1, .ala-font {
@@ -30,4 +35,8 @@ h1, .ala-font {
 #btn-graduates {
   background: $blue3;
   font-size: 1.5rem;
+}
+
+#btn-graduates:hover {
+  background: lighten($blue3, 10%);
 }
