@@ -33,12 +33,18 @@ searchBar.addEventListener("input", (e) => {
 	const query = e.target.value.toLowerCase().trim();
 	
 	people.forEach((person) => {
+		person.score = 0;
+		// Display everyone by default
+		if (query === "") {
+			person.style.display = "block";
+			return;
+		}
+		
 		// Get names from aria-label
 		const name = person.getAttribute("aria-label").toLowerCase().trim();
 		// Split by words, e.g. "Hallam Roberts" => ["Hallam", "Roberts"]
 		const words = name.match(/\w+/g);
-
-		person.score = 0;
+		
 		for (let i = 0; i < words.length; ++i) {
 			const word = words[i];
 			// startsWith is better than fuzzy search since it gives predictable results
@@ -46,7 +52,7 @@ searchBar.addEventListener("input", (e) => {
 			if (word.startsWith(query)) {
 				// Rank based on how close the word is to the start of the name
 				// E.g. "R" orders "Ruben Luzaic" before "Hallam Roberts"
-				person.score += 1 - ((i + 1) / words.length);
+				person.score += 2 - ((i + 1) / words.length);
 			}
 		}
 
