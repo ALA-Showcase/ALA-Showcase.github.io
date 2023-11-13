@@ -30,30 +30,29 @@ const people = Array.from(document.getElementsByClassName("search-item"));
 
 // No search bar is complete without an overengineered ranking system
 searchBar.addEventListener("input", (e) => {
-	const query = e.target.value.toLowerCase().trim();
+	
+	// Split by words, e.g. "Hallam Roberts" => ["Hallam", "Roberts"]
+	const query = e.target.value.toLowerCase().trim().match(/\w+/g);
 	
 	people.forEach((person) => {
 		person.score = 0;
 		// Display everyone by default
-		if (query === "") {
+		if (!query) {
 			person.style.display = "block";
 			return;
 		}
 		
-		// Get names from aria-label
-		const name = person.getAttribute("aria-label").toLowerCase().trim();
-		// Split by words, e.g. "Hallam Roberts" => ["Hallam", "Roberts"]
-		const words = name.match(/\w+/g);
-		
+		const words = person.getAttribute("aria-label").toLowerCase().trim().match(/\w+/g);
 		for (let i = 0; i < words.length; ++i) {
 			const word = words[i];
-			// startsWith is better than fuzzy search since it gives predictable results
-			// E.g. "Ru" matches "Ruben" instead of "Trung Hieu"
-			if (word.startsWith(query)) {
+			query.forEach((queryWord) => {
+				// startsWith is better than fuzzy search since it gives predictable results
+				// E.g. "Ru" matches "Ruben" instead of "Trung Hieu"
+				if (!word.startsWith(queryWord)) return;
 				// Rank based on how close the word is to the start of the name
 				// E.g. "R" orders "Ruben Luzaic" before "Hallam Roberts"
 				person.score += 2 - ((i + 1) / words.length);
-			}
+			});
 		}
 
 		// Hide non-matching results
