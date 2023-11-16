@@ -41,5 +41,5 @@ permalink: /
 		</div>
 	</div>
  
-	<a href="/graduates" id="btn-graduates" class="btn ala-font px-3 py-2 w-100">Graduates Page</a>
+	<a href="/graduates" id="btn-graduates" class="btn ala-font px-3 py-2 w-100 mb-4">Graduates Page</a>
 </div>
