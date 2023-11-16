@@ -41,7 +41,7 @@ mapkey:
   - name: Animation
     color: "#f76f00"
     
-  - name: Comp
+  - name: Lighting / Comp
     color: "#e6bc00"
     
   - name: Layout
@@ -58,9 +58,6 @@ mapkey:
     
   - name: TD
     color: "#9F1AC9"
-    
-  - name: Lighting
-    color: "#495A5A"
     
   - name: Production
     color: "#5414FF"
