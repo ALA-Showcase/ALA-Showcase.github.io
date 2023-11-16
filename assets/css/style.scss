@@ -32,12 +32,13 @@ h1, .ala-font {
   font-family: "DIN";
 }
 
-#btn-graduates {
-  background: $blue3;
-  color: white;
-  font-size: 1.5rem;
+.home-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
-#btn-graduates:hover {
-  background: lighten($blue3, 10%);
+.home-desc {
+  background: #00000090;
+  border-radius: 0 0 1rem 1rem;
 }
