@@ -14,7 +14,7 @@ defaults:
       permalink: /:basename/
 
 navigation:
-  - title: Event
+  - title: Home
     url: /
     icon: bi-house-door
     active: bi-house-door-fill
@@ -35,32 +35,32 @@ navigation:
     active: bi-mortarboard-fill
 
 mapkey:
-  - name: Art
-    color: "#ff0000"
-
-  - name: Modelling
-    color: "#ff8c00"
-
-  - name: Surfacing
-    color: "#ffff00"
-
-  - name: Animation
-    color: "#00ff00"
-
-  - name: Lighting
-    color: "#00ffff"
-
-  - name: TDs
-    color: "#0088ff"
-
-  - name: Production
-    color: "#0000ff"
-
-  - name: Comp
-    color: "#9500ff"
-
   - name: FX
-    color: "#ff00ff"
-
+    color: "#d41300"
+    
+  - name: Animation
+    color: "#f76f00"
+    
+  - name: Comp
+    color: "#e6bc00"
+    
   - name: Layout
-    color: "#ffffff"
+    color: "#6fb000"
+    
+  - name: Surfacing
+    color: "#24b300"
+    
+  - name: Art Dept
+    color: "#40c99f"
+    
+  - name: Modelling
+    color: "#0021DE"
+    
+  - name: TD
+    color: "#9F1AC9"
+    
+  - name: Lighting
+    color: "#495A5A"
+    
+  - name: Production
+    color: "#5414FF"
