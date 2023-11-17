@@ -30,7 +30,7 @@ const map = L.map("map", {
 });
 
 const padding = 2000;
-const bounds = [[0,0], [860, 1000]];
+const bounds = [[0,0], [787, 1000]];
 const maxBounds = [[bounds[0][0] - padding, bounds[0][1] - padding], [bounds[1][0] + padding, bounds[1][1] + padding]];
 
 const image = L.imageOverlay("/assets/images/map/Studio_Map_No_Title.png", bounds).addTo(map);
