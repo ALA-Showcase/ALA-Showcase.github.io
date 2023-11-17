@@ -23,7 +23,7 @@ title: "Map"
 const map = L.map("map", {
 	crs: L.CRS.Simple,
 	attributionControl: false,
-	minZoom: -2,
+	minZoom: -1,
 	maxZoom: 4
 });
 const bounds = [[0,0], [860, 1000]];
