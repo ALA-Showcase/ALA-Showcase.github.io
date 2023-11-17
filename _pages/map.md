@@ -7,7 +7,7 @@ title: "Map"
 
 <div class="w-100 position-relative" style="height: calc(100vh - 3.5rem);">
 	<h1 class="map-overlay left-0 top-0 ms-3 mt-3">Studio Map</h1>
-	<div class="map-overlay left-0 bottom-0 ms-3 me-3">
+	<div class="map-overlay left-0 bottom-0 ms-3 mb-3">
 		<h3 class="ala-font">Directory</h3>
 		{% for item in site.mapkey %}
 		<div class="m-1">
