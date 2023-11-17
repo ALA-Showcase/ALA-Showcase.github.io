@@ -27,7 +27,7 @@ const map = L.map("map", {
 	maxZoom: 4
 });
 const bounds = [[0,0], [860, 1000]];
-const image = L.imageOverlay("/assets/images/map/StudioMap.jpg", bounds).addTo(map);
+const image = L.imageOverlay("/assets/images/map/StudioMap.png", bounds).addTo(map);
 map.setMaxBounds(bounds);
 map.fitBounds(bounds);
 </script>
