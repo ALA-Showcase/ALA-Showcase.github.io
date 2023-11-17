@@ -40,17 +40,20 @@ I mainly used inline CSS for custom styling, with a few general styles in [`styl
 
 The base style for fonts and colours is [`base.scss`](_sass/base.scss).
 
+### Scripts
+Most pages use inline JavaScript, so check the [`_pages`](_pages) folder.
+
 ### Pages
 Pages are located in the [`_pages`](_pages) folder.
 
-Pages use [Liquid syntax](https://jekyllrb.com/docs/step-by-step/02-liquid/), which mixes HTML with helpers like for loops and variables.
+Pages use [Liquid syntax](https://jekyllrb.com/docs/step-by-step/02-liquid/), which adds helpers like for loops and variables on top of HTML.
 
 ### Components
 Jekyll doesn't have React-style components, but it lets you reuse HTML with [includes](https://jekyllrb.com/docs/includes/).
 
 Includes are located in the [`_includes`](_includes) folder.
 
-This is useful for elements shared between pages, like the navigation bar.
+This is good for elements shared between pages, like the navigation bar.
 
 ### Images
 Images are located in the [`assets`](assets/images) folder.
