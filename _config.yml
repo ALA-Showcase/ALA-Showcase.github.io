@@ -41,7 +41,7 @@ mapkey:
   - name: Animation
     color: "#f76f00"
     
-  - name: Lighting / Comp
+  - name: Lighting / Compositing
     color: "#e6bc00"
     
   - name: Layout
@@ -50,14 +50,17 @@ mapkey:
   - name: Surfacing
     color: "#24b300"
     
-  - name: Art Dept
+  - name: Art Department
     color: "#40c99f"
     
   - name: Modelling
     color: "#0021DE"
     
-  - name: TD
+  - name: Technical Direction
     color: "#9F1AC9"
     
   - name: Production
     color: "#5414FF"
+
+  - name: Leads / Staff
+    color: "#2c2e35"
