@@ -33,8 +33,12 @@ const map = L.map("map", {
 	minZoom: -1,
 	maxZoom: 4
 });
+
+const padding = 500;
 const bounds = [[0,0], [860, 1000]];
+const maxBounds = [[bounds[0][0] - padding, bounds[0][1]] - padding, [bounds[1][0] + padding, bounds[1][1] + padding]];
+
 const image = L.imageOverlay("/assets/images/map/StudioMap.png", bounds).addTo(map);
-map.setMaxBounds(bounds);
+map.setMaxBounds(maxBounds);
 map.fitBounds(bounds);
 </script>
