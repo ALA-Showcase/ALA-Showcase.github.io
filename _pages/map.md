@@ -31,11 +31,10 @@ const map = L.map("map", {
 	crs: L.CRS.Simple,
 	attributionControl: false,
 	minZoom: -1,
-	maxZoom: 4,
-	bounceAtZoomLimits: false
+	maxZoom: 4
 });
 
-const padding = 1000;
+const padding = 2000;
 const bounds = [[0,0], [860, 1000]];
 const maxBounds = [[bounds[0][0] - padding, bounds[0][1] - padding], [bounds[1][0] + padding, bounds[1][1] + padding]];
 
