@@ -7,7 +7,11 @@ title: "Map"
 <script>
 // Annoying hack to prevent map overlap due to the top bar on Android
 function fixHeight() {
-	document.documentElement.style.setProperty("--dvh", `${window.innerHeight}px`);
+	const newSize = `${window.innerHeight}px`;
+	const oldSize = document.documentElement.style.getPropertyValue("--dvh");
+	// Prevent redraw
+	if (oldSize === newSize) return;
+	document.documentElement.style.setProperty("--dvh", newSize);
 }
 window.addEventListener("resize", fixHeight);
 fixHeight();
