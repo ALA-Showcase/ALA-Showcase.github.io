@@ -43,23 +43,22 @@ h1, .ala-font {
   border-radius: 0 0 1rem 1rem;
 }
 
-/* Make map background white */
 .leaflet-container {
-	background: #f3f7f7;
+  background: white !important;
 }
 
 /* Move zoom control to right */
 .leaflet-left:has(.leaflet-control-zoom) {
-    right: 0;
-	left: initial;
-	margin-right: 10px;
+  right: 0;
+  left: initial;
+  margin-right: 10px;
 }
 
 /* For map overlay text */
 .map-overlay {
-	color: black;
-	position: absolute;
-	user-select: none;
-	pointer-events: none;
-	z-index: 500;
+  color: black;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  z-index: 500;
 }
