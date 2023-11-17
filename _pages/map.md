@@ -19,7 +19,7 @@ fixHeight();
 const map = L.map("map", {
 	crs: L.CRS.Simple,
 	attributionControl: false,
-	minZoom: -1,
+	minZoom: -2,
 	maxZoom: 3,
 	wheelPxPerZoomLevel: 120,
 	zoomSnap: 0,
