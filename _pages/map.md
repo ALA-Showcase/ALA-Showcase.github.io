@@ -31,7 +31,8 @@ const map = L.map("map", {
 	crs: L.CRS.Simple,
 	attributionControl: false,
 	minZoom: -1,
-	maxZoom: 4
+	maxZoom: 4,
+	zoomDelta: 0.25
 });
 
 const padding = 2000;
