@@ -13,17 +13,17 @@ window.addEventListener("resize", fixHeight);
 fixHeight();
 </script>
 
-<div id="map" class="w-100 h-100" style="height: 100vh; height: calc(var(--dvh) - 3.5rem);"></div>
+<div id="map" class="w-100" style="height: 100vh; height: calc(var(--dvh) - 3.5rem);"></div>
 
 <script>
 const map = L.map("map", {
 	crs: L.CRS.Simple,
 	attributionControl: false,
-	minZoom: -2,
+	minZoom: -1,
 	maxZoom: 3,
 	wheelPxPerZoomLevel: 120,
 	zoomSnap: 0,
-	zoomDelta: 0.25
+	zoomDelta: 0.4
 });
 
 const padding = 2000;
