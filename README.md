@@ -23,10 +23,10 @@ For example it's good for [margins and padding](https://getbootstrap.com/docs/5.
 ```
 
 ### [Bootstrap Icons](https://icons.getbootstrap.com/)
-A large pack of icons, used for the [navigation bar](_includes/navbar_bottom.html).
+A large pack of icons used for the [navigation bar](_includes/navbar_bottom.html).
 
 ### [Leaflet](https://leafletjs.com/)
-A map library used for the [studio map page](_pages/map.md).
+A map library used on the [studio map page](_pages/map.md).
 
 ## Structure
 
