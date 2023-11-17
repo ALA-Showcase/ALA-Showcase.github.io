@@ -56,8 +56,8 @@ Includes are located in the [`_includes`](_includes) folder.
 This is good for elements shared between pages, like the navigation bar.
 
 ### Images
-Images are located in the [`assets`](assets/images) folder.
+Images are located in the [`assets`](assets/images) folder, organized by page.
 
 To make the website load faster on mobile, make sure to compress images. Either `.webp` or `.jpg` is good.
 
-I included the original version of each image in the `hires` folder in case it's needed later.
+I kept the original images in `hires` subfolders in case they're needed later.
