@@ -5,18 +5,17 @@ title: "Map"
 <link rel="stylesheet" href="{{ "/assets/css/leaflet.css" | relative_url }}">
 <script src="{{ "/assets/js/leaflet.js" | relative_url }}"></script>
 <script>
-// Annoying hack to prevent map overlapping due to the top bar on Android
+// Annoying hack to prevent map overlap due to the top bar on Android
 function fixHeight() {
-	document.documentElement.style.setProperty("--viewport-height", `${window.visualViewport.height}px`);
+	document.documentElement.style.setProperty("--dvh", `${window.innerHeight}px`);
 }
-window.visualViewport.addEventListener("resize", fixHeight);
+window.addEventListener("resize", fixHeight);
 fixHeight();
 </script>
 
-<div class="w-100 position-relative" style="height: calc(var(--viewport-height) - 3.5rem);">
+<div class="w-100 position-relative" style="height: 100vh; height: calc(var(--dvh) - 3.5rem);">
 	<h1 class="map-overlay left-0 top-0 ms-3 mt-3">Studio Map</h1>
 	<div class="map-overlay left-0 bottom-0 ms-3 mb-3">
-		<h3 class="ala-font">Directory</h3>
 		{% for item in site.mapkey %}
 		<div class="m-1">
 			<i class="bi bi-circle-fill" style="color: {{item.color}};" aria-hidden="true"></i>
