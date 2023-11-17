@@ -32,6 +32,8 @@ const map = L.map("map", {
 	attributionControl: false,
 	minZoom: -1,
 	maxZoom: 4,
+	wheelPxPerZoomLevel: 120,
+	zoomSnap: 0,
 	zoomDelta: 0.25
 });
 
