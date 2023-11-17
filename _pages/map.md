@@ -35,5 +35,5 @@ const maxBounds = [[bounds[0][0] - padding, bounds[0][1] - padding], [bounds[1][
 
 const image = L.imageOverlay("/assets/images/map/Studio_Map_No_Title.svg", bounds).addTo(map);
 map.setMaxBounds(maxBounds);
-map.fitBounds(bounds, { padding: [100, 100] });
+map.fitBounds(bounds);
 </script>
