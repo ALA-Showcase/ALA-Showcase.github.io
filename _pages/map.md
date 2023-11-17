@@ -23,10 +23,10 @@ title: "Map"
 const map = L.map("map", {
 	crs: L.CRS.Simple,
 	attributionControl: false,
-	minZoom: -1,
+	minZoom: -2,
 	maxZoom: 4
 });
-const bounds = [[0,0], [786, 1000]];
+const bounds = [[0,0], [860, 1000]];
 const image = L.imageOverlay("/assets/images/map/StudioMap.png", bounds).addTo(map);
 map.setMaxBounds(bounds);
 map.fitBounds(bounds);
