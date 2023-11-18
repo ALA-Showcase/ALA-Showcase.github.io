@@ -19,19 +19,19 @@ fixHeight();
 </div>
 
 <script>
-const extent = [0, 0, 3000, 2362];
+const imageSize = [0, 0, 3000, 2362];
 const padding = 3000;
-const maxExtent = [
-	extent[0] - padding,
-	extent[1] - padding,
-	extent[2] + padding,
-	extent[3] + padding
+const maxBounds = [
+	imageSize[0] - padding,
+	imageSize[1] - padding,
+	imageSize[2] + padding,
+	imageSize[3] + padding
 ];
 
 const projection = new ol.proj.Projection({
 	code: "static-image",
 	units: "pixels",
-	extent: extent,
+	extent: imageSize,
 });
 
 const map = new ol.Map({
@@ -40,14 +40,14 @@ const map = new ol.Map({
 			source: new ol.source.ImageStatic({
 				url: "/assets/images/map/Studio_Map_No_Title.png",
 				projection: projection,
-				imageExtent: extent,
+				imageExtent: imageSize,
 			}),
 		}),
 	],
 	target: "map",
 	view: new ol.View({
-		center: ol.extent.getCenter(extent),
-		extent: maxExtent,
+		center: ol.extent.getCenter(imageSize),
+		extent: maxBounds,
 		projection: projection,
 		showFullExtent: true,
 		zoom: 2,
@@ -55,5 +55,5 @@ const map = new ol.Map({
 	}),
 });
 
-map.getView().fit(extent, {padding:[10, 10, 10, 10]});
+map.getView().fit(imageSize, {padding: [10, 10, 10, 10]});
 </script>
