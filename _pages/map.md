@@ -38,7 +38,7 @@ const map = new ol.Map({
 	layers: [
 		new ol.layer.Image({
 			source: new ol.source.ImageStatic({
-				url: "/assets/images/map/Studio_Map_No_Title.png",
+				url: "/assets/images/map/Studio_Map_No_Title.webp",
 				projection: projection,
 				imageExtent: imageSize,
 			}),

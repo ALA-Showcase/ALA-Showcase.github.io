@@ -12,7 +12,7 @@ title: "Graduates"
 			<a href="{{ member.linkedin }}">
 				<div class="card text-white card-dark">
 					<div class="card-body">
-						<img src="/assets/images/graduates/{{ member.image }}" loading="lazy" class="p-3 w-75 rounded-circle">
+						<img src="/assets/images/graduates/{{ member.image }}.webp" loading="lazy" class="p-3 w-75 rounded-circle">
 						<h5 class="card-title ala-font">{{ member.name }}</h5>
 						<p class="card-text">{{ member.first_pref }}</p>
 					</div>
