@@ -43,15 +43,10 @@ h1, .ala-font {
   border-radius: 0 0 1rem 1rem;
 }
 
-.leaflet-container {
-  background: white !important;
-}
-
 /* Move zoom control to right */
-.leaflet-left:has(.leaflet-control-zoom) {
-  right: 0;
-  left: initial;
-  margin-right: 10px;
+.ol-zoom {
+  left: unset !important;
+  right: 8px !important;
 }
 
 /* For map overlay text */
