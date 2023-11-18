@@ -3,12 +3,17 @@
 
 @import "base";
 
+:root {
+  --navbar-height: 3.5rem;
+}
+
 a {
   text-decoration: none;
 }
 
 .navbar-dark {
   background: black;
+  height: var(--navbar-height);
 }
 
 .navbar-bottom {

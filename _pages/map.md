@@ -13,7 +13,7 @@ window.addEventListener("resize", fixHeight);
 fixHeight();
 </script>
 
-<div class="w-100 position-relative bg-white" style="height: 100vh; height: calc(var(--dvh) - 3.5rem);">
+<div class="w-100 position-relative bg-white" style="height: 100vh; height: calc(var(--dvh) - var(--navbar-height));">
 	<h1 class="map-overlay left-0 top-0 ms-3 mt-3">Studio Map</h1>
 	<div id="map" class="w-100 h-100"></div>
 </div>

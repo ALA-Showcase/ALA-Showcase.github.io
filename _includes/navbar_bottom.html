@@ -1,13 +1,13 @@
 <!-- Stupid padding hack so the document isn't hidden behind the navbar -->
-<div class="m-2 d-block d-md-none" style="height: 2rem;"></div>
+<div class="d-block d-md-none" style="height: var(--navbar-height);"></div>
 
 <nav class="navbar-dark navbar-bottom d-flex d-md-none">
 	<div class="navbar-nav flex-row w-100">
 	{% for link in site.navigation %}
 		{% if page.url == link.url or (link.url != '/' and page.url contains link.url) %}
-			<a href="{{link.url}}" class="nav-link active bi {{link.active}} w-100 text-center p-2" style="font-size: 1.7rem;" aria-hidden="true"></a>
+			<a href="{{link.url}}" class="nav-link bi {{link.active}} w-100 text-center active" style="font-size: 1.7rem;" aria-hidden="true"></a>
 		{% else %}
-			<a href="{{link.url}}" class="nav-link bi {{link.icon}} w-100 text-center p-2" style="font-size: 1.7rem;" aria-hidden="true"></a>
+			<a href="{{link.url}}" class="nav-link bi {{link.icon}} w-100 text-center" style="font-size: 1.7rem;" aria-hidden="true"></a>
 		{% endif %}
 	{% endfor %}
 	</div>
