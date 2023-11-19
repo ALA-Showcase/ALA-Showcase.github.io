@@ -9,7 +9,8 @@ permalink: /
 		<div class="d-flex justify-content-center mb-5">
 			<img class="w-75" src="/assets/images/home/Alone_Title.webp">
 		</div>
-		<img class="w-100" src="/assets/images/home/Alone2.webp">
+		<canvas class="w-100" width="2048" height="858" id="alone2"></canvas>
+		<img id="alone2_img" class="w-100 d-none" src="/assets/images/home/Alone2_3D.webp">
 		<div class="p-4 mb-5 home-desc">
 			<h4 class="ala-font mb-3">Synopsis</h4>
 			<p class="mb-0">During a long-distance space voyage to a new galaxy, a lone droid dutifully maintains the human incubators, keeping the new planet settlers alive. Watching the dreams of hibernating humans makes the robot feel a deep sense of loneliness. So it crafts together a new friend from spare parts. But as things start to go wrong, the droid must make a critical decision to keep the humans alive.</p>
@@ -38,3 +39,24 @@ permalink: /
 		</div>
 	</div>
 </div>
+
+<script>
+const canvasElem = document.getElementById("alone2");
+const canvasCtx = canvasElem.getContext("2d", { alpha: false });
+const imgElem = document.getElementById("alone2_img");
+
+function draw() {
+
+	const width = canvasElem.width;
+	const height = canvasElem.height;
+
+	const scroll = window.scrollY;
+
+	canvasCtx.drawImage(imgElem, 0, 0, width, height, 0, scroll, width, height);
+	canvasCtx.drawImage(imgElem, 0, height, width, height, -scroll, 0, width, height);
+	canvasCtx.drawImage(imgElem, 0, height * 2, width, height, 0, 0, width, height);
+}
+draw();
+
+window.addEventListener("scroll", draw);
+</script>
