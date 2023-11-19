@@ -4,8 +4,9 @@ Showcase website for the UTS Animal Logic Academy 2023 cohort.
 ## Setup
 1. Install Jekyll. [Use this guide for Windows](https://jekyllrb.com/docs/installation/windows/).
 2. Open a terminal and navigate to the base of this repository.
-3. Type `bundle exec jekyll serve`.
-4. Open the URL in your browser, usually http://127.0.0.1:4000.
+3. Type `bundle install`.
+4. Type `bundle exec jekyll serve`.
+5. Open the URL in your browser, usually http://127.0.0.1:4000.
 
 ## Libraries
 This website uses a couple of libraries to make things easier. Try to use them where you can:
