@@ -58,6 +58,6 @@ This is good for elements shared between pages, like the navigation bar.
 ### Images
 Images are located in the [`assets`](assets/images) folder, organized by page.
 
-To make the website load faster on mobile, make sure to compress images. Either `.webp` or `.jpg` is good.
+To make the website load faster on mobile, make sure to compress images. I recommend `.webp`, which can be exported from [Photopea](https://photopea.com).
 
-I kept the original images in `hires` subfolders in case they're needed later.
+Keep the original images in `hires` subfolders in case they're needed later.
