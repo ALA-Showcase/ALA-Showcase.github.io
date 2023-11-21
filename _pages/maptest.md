@@ -5,7 +5,7 @@ title: "Map Test"
 <script src="{{ "/assets/js/ol.min.js" | relative_url }}"></script>
 <link rel="stylesheet" href="{{ "/assets/css/ol.min.css" | relative_url }}">
 
-<div id="map" style="width: 500px; height: 500px;"></div>
+<div id="map" class="w-100" style="height: 800px;"></div>
 <div id="info" style="display: none;"></div>
 <label for="track">
   track position
@@ -20,13 +20,7 @@ title: "Map Test"
 </p>
 
 <script>
-/*import Feature from 'ol/Feature.js';
-import Geolocation from 'ol/Geolocation.js';
-import Map from 'ol/Map.js';
-import Point from 'ol/geom/Point.js';
-import View from 'ol/View.js';
-import {Circle as CircleStyle, Fill, Stroke, Style} from 'ol/style.js';
-import {OSM, Vector as VectorSource} from 'ol/source.js';
+/*import {Circle as CircleStyle, Fill, Stroke, Style} from 'ol/style.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';*/
 
 const view = new ol.View({
@@ -34,11 +28,24 @@ const view = new ol.View({
   zoom: 2,
 });
 
+const projection = new ol.proj.Projection({
+	code: "static-image",
+	units: "pixels",
+	extent: [0, 0, 3000, 2362],
+});
+
 const map = new ol.Map({
   layers: [
-    new ol.Tile({
+    new ol.layer.Tile({
       source: new ol.source.OSM(),
     }),
+    new ol.layer.Image({
+		source: new ol.source.ImageStatic({
+			url: "/assets/images/map/Studio_Map_No_Title.webp",
+			projection: projection,
+			imageExtent: [0, 0, 3000, 2362],
+		}),
+	}),
   ],
   target: 'map',
   view: view,
@@ -100,6 +107,7 @@ positionFeature.setStyle(
 geolocation.on('change:position', function () {
   const coordinates = geolocation.getPosition();
   positionFeature.setGeometry(coordinates ? new ol.geom.Point(coordinates) : null);
+  map.getView().setCenter(coordinates);
 });
 
 new ol.layer.Vector({
@@ -108,4 +116,5 @@ new ol.layer.Vector({
     features: [accuracyFeature, positionFeature],
   }),
 });
+
 </script>
