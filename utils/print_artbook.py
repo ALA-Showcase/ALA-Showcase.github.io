@@ -2,7 +2,7 @@
 # Could convert them to webp here as well, haven't bothered yet
 
 # To convert the images to webp using ImageMagick I used this command:
-# magick.exe mogrify -format webp -quality 80 *
+# magick.exe mogrify -strip -format webp -quality 80 *
 
 import glob
 from PIL import Image
