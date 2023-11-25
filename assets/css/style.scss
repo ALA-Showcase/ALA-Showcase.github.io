@@ -62,3 +62,23 @@ h1, .ala-font {
   pointer-events: none;
   z-index: 500;
 }
+
+.pig-figure {
+  background-color: $backgroundLighter !important;
+}
+
+.accordion-item {
+  background: none;
+  border: none;
+}
+
+.accordion-button {
+  background: $backgroundDarker !important;
+  color: white !important;
+  font-size: inherit !important;
+  box-shadow: none;
+}
+
+.accordion-button:hover {
+  background: $backgroundLighter !important;
+}
