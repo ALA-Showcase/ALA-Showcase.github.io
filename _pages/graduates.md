@@ -4,7 +4,7 @@ title: "Graduates"
 ---
 
 <div class="container mt-4">
-	<h1 class="mb-3">{{page.title}}</h1>
+	<h1 class="mb-3 ala-font">{{page.title}}</h1>
 	<input id="graduateSearch" type="search" class="form-control mb-2" placeholder="Search..." aria-label="Search">
 	<div id="item-container" class="row">
 		{% for member in site.data.graduates %}
