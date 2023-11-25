@@ -6,7 +6,7 @@ title: "Artbook"
 
 <div class="container mt-4">
 	<h1 class="mb-3">{{page.title}}</h1>
-	<div id="artbook-grid"></div>
+	<div id="artbook-grid" style="overflow-x: hidden;"></div>
 </div>
 
 <script>
