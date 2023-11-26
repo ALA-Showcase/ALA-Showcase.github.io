@@ -4,16 +4,6 @@ title: "Map"
 ---
 <script src="{{ "/assets/js/ol.min.js" | relative_url }}"></script>
 <link rel="stylesheet" href="{{ "/assets/css/ol.min.css" | relative_url }}">
-<script>
-(function() {
-	// Annoying hack to prevent map overlap due to the top bar on Android
-	function fixHeight() {
-		document.documentElement.style.setProperty("--dvh", `${window.innerHeight}px`);
-	}
-	window.addEventListener("resize", fixHeight);
-	fixHeight();
-})();
-</script>
 
 <div class="w-100 position-relative bg-white" style="height: 100vh; height: calc(var(--dvh) - var(--navbar-height));">
 	<h1 class="map-overlay left-0 top-0 ms-3 mt-3 ala-font">Studio Map</h1>
