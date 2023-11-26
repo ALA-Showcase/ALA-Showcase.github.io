@@ -9,7 +9,7 @@ title: "Artbook"
 	<div id="artbook-grid" style="overflow-x: hidden;"></div>
 </div>
 
-<div id="imageContainer" class="w-100 position-fixed top-0 left-0" style="display: none; height: 100vh; overflow-x: hidden; overflow-y: scroll; background: #000000B0">
+<div id="imageContainer" class="position-fixed top-0 left-0" style="display: none; width: 100vw; height: 100vh; overflow-x: hidden; overflow-y: scroll; background: #000000B0">
 
 	<!-- Stupid padding hack so the document isn't hidden behind the top navbar -->
 	<div class="d-none d-md-block" style="height: var(--navbar-height);"></div>
