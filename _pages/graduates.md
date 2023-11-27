@@ -65,8 +65,8 @@ title: "Graduates"
 			if (!query) {
 				person.style.display = "block";
 				// Order by department preference
-				if (shouldFilter && deptIndex !== -1) {
-					person.score = dept.length - deptIndex;
+				if (shouldFilter) {
+					person.score = 2 - deptIndex / (dept.length - 1);
 				}
 				return;
 			}
@@ -80,7 +80,7 @@ title: "Graduates"
 					if (!word.startsWith(queryWord)) return;
 					// Rank based on how close the word is to the start of the name
 					// E.g. "R" orders "Ruben Luzaic" before "Hallam Roberts"
-					person.score += 2 - ((i + 1) / words.length);
+					person.score += 2 - i / (words.length - 1);
 				});
 			}
 
@@ -88,7 +88,7 @@ title: "Graduates"
 			person.style.display = person.score === 0 ? "none" : "block";
 		});
 		
-		people.sort((a, b) => {
+		people.filter(e => e.score !== 0).sort((a, b) => {
 			const diff = b.score - a.score;
 			// Sort alphabetically when names have the same score
 			return diff === 0
