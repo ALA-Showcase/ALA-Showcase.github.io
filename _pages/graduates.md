@@ -52,26 +52,30 @@ title: "Graduates"
 		people.forEach((person) => {
 			person.score = 0;
 			
-			// Hide people in non-matching departments
-			const dept = person.getAttribute("aria-department");
-			const shouldFilter = deptSelect.value !== "All";
-			const deptIndex = dept.indexOf(deptSelect.value);
-			if (shouldFilter && deptIndex === -1) {
-				person.style.display = "none";
-				return;
+			// Filter and order by department
+			if (deptSelect.value !== "All") {
+				const dept = person.getAttribute("aria-department");
+				const deptIndex = dept.indexOf(deptSelect.value);
+
+				// Hide people in non-matching departments
+				if (deptIndex === -1) {
+					person.style.display = "none";
+					return;
+				}
+
+				// Order by department preference
+				person.score += 2 - deptIndex / (dept.length - 1);
 			}
 
 			// Display everyone when no string is searched
 			if (!query) {
 				person.style.display = "block";
-				// Order by department preference
-				if (shouldFilter) {
-					person.score = 2 - deptIndex / (dept.length - 1);
-				}
 				return;
 			}
 
+			// Filter and order by name
 			const words = person.getAttribute("aria-label").toLowerCase().trim().match(/\w+/g);
+			let nameScore = 0;
 			for (let i = 0; i < words.length; ++i) {
 				const word = words[i];
 				query.forEach((queryWord) => {
@@ -80,12 +84,13 @@ title: "Graduates"
 					if (!word.startsWith(queryWord)) return;
 					// Rank based on how close the word is to the start of the name
 					// E.g. "R" orders "Ruben Luzaic" before "Hallam Roberts"
-					person.score += 2 - i / (words.length - 1);
+					nameScore += 2 - i / (words.length - 1);
 				});
 			}
 
 			// Hide non-matching results
-			person.style.display = person.score === 0 ? "none" : "block";
+			person.style.display = nameScore === 0 ? "none" : "block";
+			person.score += nameScore;
 		});
 		
 		people.filter(e => e.score !== 0).sort((a, b) => {
