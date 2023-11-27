@@ -67,22 +67,6 @@ a {
   background-color: $backgroundLighter !important;
 }
 
-.accordion-item {
-  background: none;
-  border: none;
-}
-
-.accordion-button {
-  background: $backgroundDarker !important;
-  color: white !important;
-  font-size: inherit !important;
-  box-shadow: none;
-}
-
-.accordion-button:hover {
-  background: $backgroundLighter !important;
-}
-
 .nav-link, .nav-link:hover {
   color: white;
 }

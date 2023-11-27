@@ -5,25 +5,21 @@ title: "Gallery"
 <script src="{{ "/assets/js/pig.min.js" | relative_url }}"></script>
 
 <div class="container mt-4">
-	<h1 class="mb-3 ala-font">{{page.title}}</h1>
+	<h1 class="mb-3 ala-font">{{ page.title }}</h1>
 
-	<ul class="nav nav-tabs ala-font" role="tablist">
-		{% for category in site.gallery %}
-		<li class="nav-item" role="presentation">
-			<button
-				class="gallery-tab nav-link{% if forloop.first %} active{% endif %}"
-				id="{{ category.id }}-tab"
-				data-bs-toggle="tab"
-				type="button"
-				role="tab"
-				data-category="{{ category.title }}"
-				aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-			>
-				{{ category.title }}
-			</button>
-		</li>
-		{% endfor %}
-	</ul>
+	<nav aria-label="breadcrumb" class="mb-3">
+		<div class="d-inline-block">
+			<select id="category" class="form-select">
+				{% for category in site.gallery %}
+				<option {% if forloop.first %} selected{% endif %}>{{ category.title }}</option>
+				{% endfor %}
+			</select>
+		</div>
+		<i class="bi bi-chevron-right"></i>
+		<div class="d-inline-block">
+			<select id="subcategory" class="form-select"></select>
+		</div>
+	</nav>
 
 	<div id="gallery" style="overflow-x: hidden;"></div>
 
@@ -59,32 +55,56 @@ title: "Gallery"
 
 	// Believe it or not this actually works
 	const allImages = [
-		{% for artwork in site.data.artbook %}
+		{% for artwork in site.data.gallery %}
 		{
-			"film": "{{ artwork.film }}",
-			"filename": "/{{ artwork.path }}.webp",
+			"category": "{{ artwork.category }}",
+			"subcategory": "{{ artwork.subcategory }}",
+			"filename": "/{{ artwork.path }}",
 			"aspectRatio": {{ artwork.aspect-ratio }}
 		},
 		{% endfor %}
 	];
 
-	// Randomize image order, from https://stackoverflow.com/questions/2450954
+	const categoryMap = {
+		{% for category in site.gallery %}
+		"{{ category.title }}": [
+			{% for subcategory in category.subcategories %}
+			"{{ subcategory }}",
+			{% endfor %}
+		],
+		{% endfor %}
+	};
+
+	// Stolen from https://stackoverflow.com/questions/2450954
 	function shuffle(array) {
 		let currentIndex = array.length, randomIndex;
 		while (currentIndex > 0) {
-			// Pick a remaining element.
 			randomIndex = Math.floor(Math.random() * currentIndex);
 			currentIndex--;
-			// And swap it with the current element.
 			[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
 		}
 		return array;
 	}
 
-	function makePig(category) {
-		const filtered = allImages.filter((e) => category === e.film);
+	let pig;
+	function updatePig(category, subcategory) {
+
+		// Filter results by category and subcategory, or return everything when "Everything" is selected
+		const filtered = allImages.filter(function(e) {
+			return e.category === category && (subcategory === "Everything" || e.subcategory == subcategory);
+		});
+
+		// Randomize image order to keep things interesting
 		const shuffled = shuffle(filtered);
-		return new Pig(shuffled, {
+
+		// Disable old pig
+		if (pig) pig.disable();
+
+		// Wipe all currently displayed images
+		gallery.innerHTML = "";
+
+		// Make a fresh pig to display the new content
+		pig = new Pig(shuffled, {
 			containerId: "gallery",
 			urlForSize: function(filename, size) {
 				// Can't be bothered making proxies
@@ -99,7 +119,7 @@ title: "Gallery"
 				} else if (lastWindowWidth <= 1920) {
 					return 2; // Laptops
 				} else {
-					return 3;  // Large desktops
+					return 3; // Large desktops
 				}
 			},
 			onClickHandler: function(filename) {
@@ -111,27 +131,30 @@ title: "Gallery"
 		}).enable();
 	}
 
-	let pig;
-	const tabs = document.getElementsByClassName("gallery-tab");
-	for (let i = 0; i < tabs.length; ++i) {
+	const catElem = document.getElementById("category");
+	const subcatElem = document.getElementById("subcategory");
 
-		const tab = tabs[i];
-		const category = tab.getAttribute("data-category");
-
-		// Load default content based on active tab
-		if (tab.classList.contains("active")) {
-			pig = makePig(category);
-		}
-
-		// Swap gallery content whenever a tab is clicked
-		tab.addEventListener("click", function(e) {
-			// Disable old pig
-			if (pig) pig.disable();
-			// Wipe all currently displayed images
-			gallery.innerHTML = "";
-			// Create a fresh pig to display new content
-			pig = makePig(category);
-		});
+	function updateCategory() {
+		// Update displayed images
+		updatePig(catElem.value, subcatElem.value);
 	}
+
+	function updateSubcategory() {
+		// Update listed options
+		const newCat = catElem.value;
+		subcatElem.innerText = "";
+		const items = categoryMap[newCat];
+		items.forEach(function(elem) {
+			const opt = document.createElement("option");
+			opt.text = elem;
+			subcatElem.add(opt)
+		});
+		updateCategory();
+	}
+
+	catElem.addEventListener("change", updateSubcategory);
+	subcatElem.addEventListener("change", updateCategory);
+	updateSubcategory();
+
 })();
 </script>
