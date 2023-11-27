@@ -53,9 +53,9 @@ title: "Graduates"
 			person.score = 0;
 			
 			// Hide people in non-matching departments
-			const department = person.getAttribute("aria-department");
-			const deptQuery = deptSelect.value;
-			if (deptQuery !== "All" && department.indexOf(deptQuery) === -1) {
+			const dept = person.getAttribute("aria-department");
+			const deptIndex = dept.indexOf(deptSelect.value);
+			if (deptSelect.value !== "All" && deptIndex === -1) {
 				person.style.display = "none";
 				return;
 			}
@@ -63,6 +63,10 @@ title: "Graduates"
 			// Display everyone when no string is searched
 			if (!query) {
 				person.style.display = "block";
+				// Order by department preference
+				if (deptIndex !== -1) {
+					person.score = dept.length - deptIndex;
+				}
 				return;
 			}
 
