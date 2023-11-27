@@ -14,7 +14,7 @@ title: "Graduates"
 					<div class="card-body">
 						<img src="/assets/images/graduates/{{ member.id }}.webp" loading="lazy" class="p-3 w-75 rounded-circle">
 						<h5 class="card-title ala-font">{{ member.name }}</h5>
-						<p class="card-text">{{ member.first_pref }}</p>
+						<p class="card-text">{{ member.preference }}</p>
 					</div>
 				</div>
 			</a>
