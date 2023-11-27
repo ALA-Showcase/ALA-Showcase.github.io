@@ -24,12 +24,25 @@ navigation:
     icon: bi-geo-alt
     active: bi-geo-alt-fill
 
-  - title: Artbook
-    url: /artbook
-    icon: bi-palette
-    active: bi-palette-fill
+  - title: Gallery
+    url: /gallery
+    icon: bi-image
+    active: bi-image-fill
 
   - title: Graduates
     url: /graduates
     icon: bi-mortarboard
     active: bi-mortarboard-fill
+
+gallery:
+  - title: Alone
+    id: alone
+
+  - title: Coffee Brake
+    id: coffeebrake
+
+  - title: Social
+    id: social
+
+  - title: Memes
+    id: memes
