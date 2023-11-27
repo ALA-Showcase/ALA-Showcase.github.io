@@ -56,13 +56,11 @@ title: "Graduates"
 			if (deptSelect.value !== "All") {
 				const dept = person.getAttribute("aria-department");
 				const deptIndex = dept.indexOf(deptSelect.value);
-
 				// Hide people in non-matching departments
 				if (deptIndex === -1) {
 					person.style.display = "none";
 					return;
 				}
-
 				// Order by department preference
 				person.score += 2 - deptIndex / (dept.length - 1);
 			}
