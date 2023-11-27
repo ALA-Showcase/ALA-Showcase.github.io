@@ -54,8 +54,9 @@ title: "Graduates"
 			
 			// Hide people in non-matching departments
 			const dept = person.getAttribute("aria-department");
+			const shouldFilter = deptSelect.value !== "All";
 			const deptIndex = dept.indexOf(deptSelect.value);
-			if (deptSelect.value !== "All" && deptIndex === -1) {
+			if (shouldFilter && deptIndex === -1) {
 				person.style.display = "none";
 				return;
 			}
@@ -64,7 +65,7 @@ title: "Graduates"
 			if (!query) {
 				person.style.display = "block";
 				// Order by department preference
-				if (deptIndex !== -1) {
+				if (shouldFilter && deptIndex !== -1) {
 					person.score = dept.length - deptIndex;
 				}
 				return;
