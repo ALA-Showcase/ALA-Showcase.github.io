@@ -91,7 +91,7 @@ title: "Graduates"
 			person.score += nameScore;
 		});
 		
-		people.filter(e => e.score !== 0).sort((a, b) => {
+		people.sort((a, b) => {
 			const diff = b.score - a.score;
 			// Sort alphabetically when names have the same score
 			return diff === 0

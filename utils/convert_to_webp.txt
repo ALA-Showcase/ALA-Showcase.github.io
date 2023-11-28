@@ -1,0 +1,5 @@
+Run this in a command prompt to convert everything to webp
+Replace the filepath with your photo wall directory
+Webp supports animation, but for videos it's better to use webm
+
+for /r "C:\Users\MysteryPancake\Desktop\Photo Wall" %a in (*.*) do magick.exe mogrify -strip -format webp -quality 80 "%~a"

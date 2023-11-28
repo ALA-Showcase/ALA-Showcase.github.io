@@ -38,16 +38,25 @@ gallery:
   - title: Alone
     subcategories:
       - Everything
+      - Anim
       - Art
-      - Modelling
+      - Comp
       - FX
+      - Lighting
+      - Modelling
+      - Surfacing
+      - TD
 
   - title: Coffee Brake
     subcategories:
       - Everything
+      - Anim
       - Art
-      - Modelling
+      - Comp
       - FX
+      - Modelling
+      - Previs
+      - Surfacing
 
   - title: Social
     subcategories:
