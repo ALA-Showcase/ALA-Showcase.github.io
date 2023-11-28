@@ -9,14 +9,15 @@ title: "Gallery"
 
 	<nav aria-label="breadcrumb" class="mb-3">
 		<div class="d-inline-block">
+			<label for="category" class="mb-1">Project</label>
 			<select id="category" class="form-select">
 				{% for category in site.gallery %}
-				<option {% if forloop.first %} selected{% endif %}>{{ category.title }}</option>
+				<option{% if forloop.first %} selected{% endif %}>{{ category.title }}</option>
 				{% endfor %}
 			</select>
 		</div>
-		<i class="bi bi-chevron-right"></i>
 		<div class="d-inline-block">
+			<label for="subcategory" class="mb-1">Department</label>
 			<select id="subcategory" class="form-select"></select>
 		</div>
 	</nav>
@@ -86,12 +87,12 @@ title: "Gallery"
 		return array;
 	}
 
-	let pig;
-	function updatePig(category, subcategory) {
+	let pig, oldCat;
 
-		// Filter results by category and subcategory, or return everything when "Everything" is selected
+	function updatePig(category, subcategory) {
+		// Filter results by category and subcategory, or return everything when "All" is selected
 		const filtered = allImages.filter(function(e) {
-			return e.category === category && (subcategory === "Everything" || e.subcategory == subcategory);
+			return e.category === category && (subcategory === "All" || e.subcategory == subcategory);
 		});
 
 		// Randomize image order to keep things interesting
@@ -101,7 +102,7 @@ title: "Gallery"
 		if (pig) pig.disable();
 
 		// Wipe all currently displayed images
-		gallery.innerHTML = "";
+		gallery.innerText = "";
 
 		// Make a fresh pig to display the new content
 		pig = new Pig(shuffled, {
@@ -134,27 +135,32 @@ title: "Gallery"
 	const catElem = document.getElementById("category");
 	const subcatElem = document.getElementById("subcategory");
 
-	function updateCategory() {
+	function updateSubcategory() {
 		// Update displayed images
 		updatePig(catElem.value, subcatElem.value);
+		oldCat = subcatElem.value;
 	}
 
-	function updateSubcategory() {
-		// Update listed options
-		const newCat = catElem.value;
+	function updateCategory() {
+		// Rebuild the subcategory list
 		subcatElem.innerText = "";
-		const items = categoryMap[newCat];
+		const items = categoryMap[catElem.value];
 		items.forEach(function(elem) {
 			const opt = document.createElement("option");
 			opt.text = elem;
 			subcatElem.add(opt)
 		});
-		updateCategory();
+
+		// Restore the subcategory if possible
+		if (items.indexOf(oldCat) !== -1) {
+			subcatElem.value = oldCat;
+		}
+		
+		updateSubcategory();
 	}
 
-	catElem.addEventListener("change", updateSubcategory);
-	subcatElem.addEventListener("change", updateCategory);
-	updateSubcategory();
-
+	catElem.addEventListener("change", updateCategory);
+	subcatElem.addEventListener("change", updateSubcategory);
+	updateCategory();
 })();
 </script>

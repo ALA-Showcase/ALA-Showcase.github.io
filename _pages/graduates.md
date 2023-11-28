@@ -7,7 +7,7 @@ title: "Graduates"
 	<h1 class="mb-3 ala-font">{{ page.title }}</h1>
 	<input id="graduateSearch" type="search" class="form-control mb-2" placeholder="Search..." aria-label="Search">
 	<select id="department" class="form-select mb-2">
-		<option value="All" selected>All Skillsets</option>
+		<option value="All" selected>All Departments</option>
 		<option>Animation</option>
 		<option>Art</option>
 		<option>Compositing</option>

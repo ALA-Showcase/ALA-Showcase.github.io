@@ -4,6 +4,24 @@ title: "Home"
 permalink: /
 ---
 
+<!--<div class="py-5 home-bg" style="background-image: url('/assets/images/home/Alone_BG.webp');">
+	<div class="container">
+		<div class="d-flex justify-content-center mb-5">
+			<img class="w-75" src="/assets/images/home/Welcome_Title.webp">
+		</div>
+		<img class="w-100" src="/assets/images/home/Landingimage.webp">
+		<div class="p-4 mb-5 home-desc">
+			<h4 class="ala-font mb-3">Welcome to the 2023 UTS Animal Logic Academy Showcase!</h4>
+			<p class="mb-0">A big welcome to the studio from Animal Logic Academy! This years 2023 showcase, "Doughnuts and Droids", will display the incredible short films "Alone" and "Coffee Break". A break down of both films can be found when you scroll below as well as a venue map, artbook and the graduates contact details. A sincere thank you to our staff for helping all the students cross the finish line and never feel alone during this process, we hope you enjoy the showcase and the take the chance to check out each graduates work! </p>
+		</div>
+		<img class="w-100" src="/assets/images/home/Landingimage2.webp">
+		<div class="p-4 home-desc">
+			<h4 class="ala-font mb-3">Acknowledgment of country</h4>
+			<p class="mb-0">We would liketo acknowledge the Gadigal people of the Eora Nation upon whose ancestral lands our City campus now stands. We would also like to pay respect to the Elders both past and present, acknowledging them as the traditional custodians of knowledge for this land. </p>
+		</div>
+	</div>
+</div>-->
+
 <div class="py-5 home-bg" style="background-image: url('/assets/images/home/Alone_BG.webp');">
 	<div class="container">
 		<div class="d-flex justify-content-center mb-5">
