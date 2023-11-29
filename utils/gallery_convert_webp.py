@@ -14,7 +14,7 @@ for f in glob.glob("../assets/images/artbook/**/*.*", recursive=True):
 
 		print(f"Processing {f}")
 
-		for new_height in [20, 500, 8192]:
+		for new_height in [20, 100, 200, 500, 8192]:
 
 			folders = str(path.parent)
 			name = path.stem

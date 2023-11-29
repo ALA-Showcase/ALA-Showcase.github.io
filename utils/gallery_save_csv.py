@@ -21,7 +21,7 @@ total_webp = 0
 with open("gallery.csv", "w", newline="") as file:
 
 	writer = csv.writer(file)
-	writer.writerow(["path", "aspect-ratio", "category", "subcategory", "description"])
+	writer.writerow(["path", "aspect-ratio", "category", "subcategory"])
 
 	for f in glob.glob("../assets/images/artbook/**/*.*", recursive=True):
 
@@ -37,7 +37,7 @@ with open("gallery.csv", "w", newline="") as file:
 			category = pathSplit[3]
 			subcategory = pathSplit[4] if len(pathSplit) > 5 else category
 
-			writer.writerow([path, ratio, category, subcategory, ""])
+			writer.writerow([path, ratio, category, subcategory])
 
 			total_webp += 1
 		total += 1

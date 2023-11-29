@@ -26,7 +26,8 @@ title: "Graduates"
 					<div class="card-body">
 						<img src="/assets/images/graduates/{{ member.id }}.webp" loading="lazy" class="p-3 w-75 rounded-circle">
 						<h5 class="card-title ala-font">{{ member.name }}</h5>
-						<p class="card-text">{{ member.preference }}</p>
+						<p class="card-text mb-0">{{ member.preference }}</p>
+						<i class="bi bi-arrow-right" style="font-size: 2rem;"></i>
 					</div>
 				</div>
 			</a>
