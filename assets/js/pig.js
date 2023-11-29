@@ -827,7 +827,9 @@
                 animationSlide: false,
                 spinner: false,
                 swipeClose: false,
-                nav: false
+                docClose: false,
+                nav: false,
+                overlayOpacity: 1
               });
             }
           }
