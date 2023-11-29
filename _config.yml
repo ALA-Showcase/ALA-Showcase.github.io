@@ -50,10 +50,12 @@ gallery:
   - title: Coffee Brake
     subcategories:
       - All
+      - Dimensions
       - Anim
       - Art
       - Comp
       - FX
+      - Lighting
       - Modelling
       - Previs
       - Surfacing

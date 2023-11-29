@@ -92,8 +92,13 @@ title: "Gallery"
 		pig = new Pig(shuffled, {
 			containerId: "gallery",
 			urlForSize: function(filename, size) {
-				// Can't be bothered making proxies
-				return filename;
+				const lastIndex = filename.lastIndexOf(".");
+				const name = filename.substring(0, lastIndex);
+				const ext = filename.substring(lastIndex + 1);
+				return `${name}_s${size}.${ext}`;
+			},
+			getImageSize: function(lastWindowWidth) {
+				return 500;
 			},
 			getMinAspectRatio: function(lastWindowWidth) {
 				// Sets the number of images displayed per row (using multiple when needed)
