@@ -823,6 +823,10 @@
                 heightRatio: 1,
                 fadeSpeed: 100,
                 showCounter: false,
+                preloading: false,
+                animationSlide: false,
+                spinner: false,
+                swipeClose: false,
                 nav: false
               });
             }
