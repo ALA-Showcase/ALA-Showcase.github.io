@@ -105,7 +105,7 @@ title: "Gallery"
 				if (lightbox) lightbox.destroy();
 
 				// Fun hack, surprisingly this works
-				gallery.setAttribute("openImage", path);
+				gallery.setAttribute("path", path);
 
 				// Make a new lightbox to display the image
 				lightbox = new window.SimpleLightbox(gallery, {
@@ -119,7 +119,7 @@ title: "Gallery"
 					overlayOpacity: 1,
 					preloading: false,
 					showCounter: false,
-					sourceAttr: "openImage",
+					sourceAttr: "path",
 					spinner: false,
 					swipeClose: false,
 					widthRatio: 1,
