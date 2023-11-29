@@ -104,27 +104,27 @@ title: "Gallery"
 				// Destroy the last lightbox
 				if (lightbox) lightbox.destroy();
 
-				// Make an image for the new lightbox to display
-				const img = new Image();
-				img.src = path;
+				// Fun hack, surprisingly this works
+				gallery.setAttribute("openImage", path);
 
-				// Make a new lightbox and open the image
-				lightbox = new window.SimpleLightbox(img, {
-					sourceAttr: "src",
-					captions: false,
-					widthRatio: 1,
-					heightRatio: 1,
-					fadeSpeed: 100,
-					showCounter: false,
-					preloading: false,
+				// Make a new lightbox to display the image
+				lightbox = new window.SimpleLightbox(gallery, {
 					animationSlide: false,
+					captions: false,
+					docClose: false,
+					fadeSpeed: 100,
+					fileExt: false,
+					heightRatio: 1,
+					nav: false,
+					overlayOpacity: 1,
+					preloading: false,
+					showCounter: false,
+					sourceAttr: "openImage",
 					spinner: false,
 					swipeClose: false,
-					docClose: false,
-					nav: false,
-					overlayOpacity: 1
+					widthRatio: 1,
 				});
-				lightbox.open(img);
+				lightbox.open(gallery);
 			}
 		}).enable();
 	}
