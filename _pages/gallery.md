@@ -2,7 +2,9 @@
 layout: default
 title: "Gallery"
 ---
-<script src="{{ "/assets/js/pig.min.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/simple-lightbox.min.js" | relative_url }}"></script>
+<link rel="stylesheet" href="{{ "/assets/css/simple-lightbox.min.css" | relative_url }}">
+<script src="{{ "/assets/js/pig.js" | relative_url }}"></script>
 
 <div class="container mt-4">
 	<h1 class="mb-3 ala-font">{{ page.title }}</h1>
@@ -23,36 +25,11 @@ title: "Gallery"
 	</nav>
 
 	<div id="gallery" style="overflow-x: hidden;"></div>
-
-</div>
-
-<div id="imageContainer" class="position-fixed top-0 left-0" style="display: none; width: 100vw; height: 100vh; overflow-x: hidden; overflow-y: scroll; background: #000000B0">
-
-	<!-- Stupid padding hack so the document isn't hidden behind the top navbar -->
-	<div class="d-none d-md-block" style="height: var(--navbar-height);"></div>
-
-	<button id="backButton">BACK</button>
-
-	<img id="imageElem" class="w-100">
-
-	<p class="text-white text-center mt-3">Insert description here idk</p>
-
-	<!-- Stupid padding hack so the document isn't hidden behind the bottom navbar -->
-	<div class="d-block d-md-none" style="height: var(--navbar-height);"></div>
 </div>
 
 <script>
 (function() {
-
 	const gallery = document.getElementById("gallery");
-	const imgContainer = document.getElementById("imageContainer");
-	const imgElem = document.getElementById("imageElem");
-	const back = document.getElementById("backButton");
-
-	// Hide the fullscreen image div when the back button is clicked
-	back.addEventListener("click", function(e) {
-		imgContainer.style.display = "none";
-	});
 
 	// Believe it or not this actually works
 	const allImages = [
@@ -122,12 +99,6 @@ title: "Gallery"
 				} else {
 					return 3; // Large desktops
 				}
-			},
-			onClickHandler: function(filename) {
-				// Show the div when the image is clicked
-				imgContainer.style.display = "block";
-				// Change the image URL
-				imgElem.src = filename;
 			}
 		}).enable();
 	}

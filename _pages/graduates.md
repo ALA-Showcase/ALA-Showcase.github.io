@@ -2,7 +2,6 @@
 layout: default
 title: "Graduates"
 ---
-
 <div class="container mt-4">
 	<h1 class="mb-3 ala-font">{{ page.title }}</h1>
 	<input id="graduateSearch" type="search" class="form-control mb-2" placeholder="Search..." aria-label="Search">
@@ -38,7 +37,6 @@ title: "Graduates"
 
 <script>
 (function() {
-	
 	const searchBar = document.getElementById("graduateSearch");
 	const deptSelect = document.getElementById("department");
 	const container = document.getElementById("item-container");

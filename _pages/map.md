@@ -12,7 +12,6 @@ title: "Map"
 
 <script>
 (function() {
-
 	const imageWidth = 2362;
 	const imageHeight = 3000;
 
