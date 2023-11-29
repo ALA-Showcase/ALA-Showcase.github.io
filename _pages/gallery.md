@@ -4,7 +4,7 @@ title: "Gallery"
 ---
 <script src="{{ "/assets/js/simple-lightbox.min.js" | relative_url }}"></script>
 <link rel="stylesheet" href="{{ "/assets/css/simple-lightbox.min.css" | relative_url }}">
-<script src="{{ "/assets/js/pig.js" | relative_url }}"></script>
+<script src="{{ "/assets/js/pig.min.js" | relative_url }}"></script>
 
 <div class="container mt-4">
 	<h1 class="mb-3 ala-font">{{ page.title }}</h1>
@@ -64,7 +64,7 @@ title: "Gallery"
 		return array;
 	}
 
-	let pig, oldCat;
+	let pig, oldCat, lightbox;
 
 	function updatePig(category, subcategory) {
 		// Filter results by category and subcategory, or return everything when "All" is selected
@@ -99,6 +99,32 @@ title: "Gallery"
 				} else {
 					return 3; // Large desktops
 				}
+			},
+			onClickHandler: function(path) {
+				// Destroy the last lightbox
+				if (lightbox) lightbox.destroy();
+
+				// Make an image for the new lightbox to display
+				const img = new Image();
+				img.src = path;
+
+				// Make a new lightbox and open the image
+				lightbox = new window.SimpleLightbox(img, {
+					sourceAttr: "src",
+					captions: false,
+					widthRatio: 1,
+					heightRatio: 1,
+					fadeSpeed: 100,
+					showCounter: false,
+					preloading: false,
+					animationSlide: false,
+					spinner: false,
+					swipeClose: false,
+					docClose: false,
+					nav: false,
+					overlayOpacity: 1
+				});
+				lightbox.open(img);
 			}
 		}).enable();
 	}
