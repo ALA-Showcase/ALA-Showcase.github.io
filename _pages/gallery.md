@@ -38,7 +38,14 @@ title: "Gallery"
 			"category": "{{ artwork.category }}",
 			"subcategory": "{{ artwork.subcategory }}",
 			"filename": "/{{ artwork.path }}",
-			"aspectRatio": {{ artwork.aspect-ratio }}
+			"aspectRatio": {{ artwork.aspect-ratio }},
+
+			// Fun hack to trick SimpleLightbox into thinking we're a DOM element
+			"getAttribute": () => "/{{ artwork.path }}",
+			"addEventListener": () => {},
+			"removeEventListener": () => {},
+			"dispatchEvent": () => {},
+			"querySelector": () => {},
 		},
 		{% endfor %}
 	];
@@ -104,27 +111,21 @@ title: "Gallery"
 				// Destroy the last lightbox
 				if (lightbox) lightbox.destroy();
 
-				// Fun hack, surprisingly this works
-				gallery.setAttribute("path", path);
-
 				// Make a new lightbox to display the image
-				lightbox = new window.SimpleLightbox(gallery, {
-					animationSlide: false,
+				lightbox = new window.SimpleLightbox(filtered, {
 					captions: false,
 					docClose: false,
 					fadeSpeed: 100,
 					fileExt: false,
 					heightRatio: 1,
-					nav: false,
 					overlayOpacity: 1,
-					preloading: false,
 					showCounter: false,
-					sourceAttr: "path",
-					spinner: false,
+					sourceAttr: "filename",
+					preload: false,
 					swipeClose: false,
 					widthRatio: 1,
 				});
-				lightbox.open(gallery);
+				lightbox.open(filtered.find(e => e.filename === path));
 			}
 		}).enable();
 	}
