@@ -2,12 +2,19 @@
 // $bodyFont: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 
 // ALA font stack, looks a bit plain
-$bodyFont: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Open Sans", Arial, "Lucida Grande", sans-serif;
+$bodyFont: "NB International", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Open Sans", Arial, "Lucida Grande", sans-serif;
 
 @font-face {
   font-family: "DIN";
   src: url("/assets/fonts/dinweb-bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NB International";
+  src: url("/assets/fonts/nb_international_pro_regular-webfont.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 

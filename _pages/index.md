@@ -3,24 +3,28 @@ layout: default
 title: "Home"
 permalink: /
 ---
-
-<!--<div class="py-5 home-bg" style="background-image: url('/assets/images/home/Alone_BG.webp');">
+<div class="py-5 bg-black">
 	<div class="container">
-		<div class="d-flex justify-content-center mb-5">
-			<img class="w-75" src="/assets/images/home/Welcome_Title.webp">
+		<div class="d-flex justify-content-center gap-3">
+			<img src="/assets/images/home/UTS_Logo.webp" height="32">
+			<img src="/assets/images/home/AL_Logo.webp" height="32">
 		</div>
-		<img class="w-100" src="/assets/images/home/Landingimage.webp">
-		<div class="p-4 mb-5 home-desc">
-			<h4 class="ala-font mb-3">Welcome to the 2023 UTS Animal Logic Academy Showcase!</h4>
-			<p class="mb-0">A big welcome to the studio from Animal Logic Academy! This years 2023 showcase, "Doughnuts and Droids", will display the incredible short films "Alone" and "Coffee Break". A break down of both films can be found when you scroll below as well as a venue map, artbook and the graduates contact details. A sincere thank you to our staff for helping all the students cross the finish line and never feel alone during this process, we hope you enjoy the showcase and the take the chance to check out each graduates work! </p>
+		<div class="text-center" style="margin-top: 12rem;">
+			<h4 class="ala-font2 mb-4">UTS Animal Logic Academy Presents</h4>
+			<h1 class="ala-font mb-4" style="font-size: 6rem;">Welcome</h1>
+			<h4 class="ala-font2" style="margin-bottom: 12rem;">2023 Student Showcase</h4>
 		</div>
-		<img class="w-100" src="/assets/images/home/Landingimage2.webp">
-		<div class="p-4 home-desc">
-			<h4 class="ala-font mb-3">Acknowledgment of country</h4>
-			<p class="mb-0">We would liketo acknowledge the Gadigal people of the Eora Nation upon whose ancestral lands our City campus now stands. We would also like to pay respect to the Elders both past and present, acknowledging them as the traditional custodians of knowledge for this land. </p>
+		<div class="row mt-5 mx-3">
+			<div class="col-8">
+				<p>This year's <i>Donuts & Droids</i> showcase highlights our incredible short films <i>Alone</i> and <i>Coffee Break</i>. A sincere thank you to our staff for helping all the students cross the finish line and never feel Alone during the process. We hope you enjoy the showcase and take the chance to check out our graduates' work!</p>
+				<p>We would like to acknowledge the Gadigal people of the Eora Nation upon whose ancestral lands our city campus now stands. We would also like to pay respect to the Elders both past and present, acknowledging them as the traditional custodians of knowledge for this land.</p>
+			</div>
+			<div class="col">
+				<img class="w-100" src="/assets/images/home/AloneDonut.webp">
+			</div>
 		</div>
 	</div>
-</div>-->
+</div>
 
 <div class="py-5 home-bg" style="background-image: url('/assets/images/home/Alone_BG.webp');">
 	<div class="container">
@@ -39,6 +43,7 @@ permalink: /
 		</div>
 	</div>
 </div>
+
 <div class="py-5 home-bg" style="background-image: url('/assets/images/home/CoffeeBrake_BG.webp');">
 	<div class="container">
 		<div class="d-flex justify-content-center mb-5">
