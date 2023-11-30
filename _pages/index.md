@@ -11,7 +11,7 @@ permalink: /
 		</div>
 		<div class="text-center" style="margin-top: 8rem;">
 			<h1 class="ala-font mb-4" style="font-size: min(20vw, 7rem);">Welcome</h1>
-			<h4 class="ala-font2" style="margin-bottom: 6rem;">To ALA's 2023 Showcase!</h4>
+			<h4 class="ala-font2" style="margin-bottom: 6rem;">To The 2023 Showcase!</h4>
 		</div>
 		<div class="row mt-5 mx-2">
 			<div class="col-md align-self-center mb-5 text-hack">
