@@ -98,7 +98,13 @@ title: "Gallery"
 				return `${name}_s${size}.${ext}`;
 			},
 			getImageSize: function(lastWindowWidth) {
-				return 500;
+				if (lastWindowWidth <= 640) {
+					return 100; // Phones
+				} else if (lastWindowWidth <= 1920) {
+					return 250;// Tablets and latops
+				} else {
+					return 500; // Large desktops
+				}
 			},
 			getMinAspectRatio: function(lastWindowWidth) {
 				// Sets the number of images displayed per row (using multiple when needed)

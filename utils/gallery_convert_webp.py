@@ -10,7 +10,7 @@ for f in glob.glob("../assets/images/artbook/**/*.*", recursive=True):
 	path = Path(f)
 	ext = path.suffix.lower()
 
-	if ext in [".png", ".jpg", ".jpeg", ".heic"]:
+	if ext in [".png", ".jpg", ".jpeg", ".heic", ".tiff", ".tif"]:
 
 		print(f"Processing {f}")
 
