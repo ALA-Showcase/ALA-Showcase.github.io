@@ -52,7 +52,7 @@ title: "Map"
 	svgContainer.style.transformOrigin = "top left";
 
 	const req = new XMLHttpRequest();
-	req.open("GET", "/assets/images/map/Studio_Map_No_Title.svg");
+	req.open("GET", "/assets/images/map/Studio_Map.svg");
 	req.addEventListener("load", function() {
 		const svg = req.responseXML.documentElement;
 		svgContainer.ownerDocument.importNode(svg);

@@ -27,7 +27,7 @@ title: "Graduates"
 						<img src="/assets/images/graduates/{{ member.id }}.webp" loading="lazy" class="p-3 w-75 rounded-circle">
 						<h5 class="card-title ala-font">{{ member.name }}</h5>
 						<p class="card-text mb-2">{{ member.preference }}</p>
-						<i class="bi bi-chevron-right" style="font-size: 2rem;"></i>
+						<i class="bi bi-chevron-right" style="font-size: 1.5rem;"></i>
 					</div>
 				</div>
 			</a>
