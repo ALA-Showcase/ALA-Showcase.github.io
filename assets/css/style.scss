@@ -58,7 +58,6 @@ a {
 }
 
 .home-gold {
-  font-family: "DIN";
   color: #ffb000;
 }
 
@@ -103,5 +102,11 @@ a {
 @media (min-width: 1400px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1140px;
+  }
+}
+
+@media (min-width:768px) {
+  .text-hack {
+    font-size: 1.2rem;
   }
 }

@@ -10,12 +10,12 @@ permalink: /
 			<img src="/assets/images/home/AL_Logo.webp" height="32">
 		</div>
 		<div class="text-center" style="margin-top: 8rem;">
-			<h1 class="ala-font mb-4" style="font-size: 6rem;">Welcome</h1>
-			<h4 class="ala-font2" style="margin-bottom: 6rem;">To The ALA 2023 Showcase!</h4>
+			<h1 class="ala-font mb-4" style="font-size: min(20vw, 7rem);">Welcome</h1>
+			<h4 class="ala-font2" style="margin-bottom: 6rem;">To ALA's 2023 Showcase!</h4>
 		</div>
 		<div class="row mt-5 mx-2">
-			<div class="col-md align-self-center mb-5" style="font-size: 1.2rem;">
-				<p>This year's <span class="home-gold">Donuts & Droids</span> showcase features our latest short films <span class="home-gold">Alone</span> and <span class="home-gold">Coffee Break</span>. We hope you enjoy the showcase and take the opportunity to check out our graduates' work!</p>
+			<div class="col-md align-self-center mb-5 text-hack">
+				<p>This year's <span class="home-gold ala-font">Donuts & Droids</span> showcase features our latest short films <span class="home-gold ala-font">Alone</span> and <span class="home-gold ala-font">Coffee Break</span>. We hope you enjoy the showcase and take the opportunity to check out our graduates' work!</p>
 				<p>We would like to acknowledge the Gadigal people of the Eora Nation upon whose ancestral lands our city campus stands. We pay respect to the Elders, acknowledging them as the traditional custodians of this land.</p>
 			</div>
 			<div class="col-md align-self-end">
@@ -37,7 +37,7 @@ permalink: /
 		</div>
 		<img class="w-100" src="/assets/images/home/Alone1.webp">
 		<div class="p-4 home-desc">
-			<h4 class="ala-font mb-3">Project Description</h4>
+			<h4 class="ala-font mb-3">Description</h4>
 			<p class="mb-0">‘Alone’ is a 3D animation project created by the Master of Animation and Visualisation students at the UTS Animal Logic Academy. The story idea was developed collaboratively early in the year, then the students worked in specialised departments from art, modelling, rigging, animation, previs/layout, surfacing, effects, lighting, compositing, technical direction and production coordination to complete the film in just 30 weeks of production to the highest possible industry standards.</p>
 		</div>
 	</div>
@@ -55,8 +55,8 @@ permalink: /
 		</div>
 		<img class="w-100" src="/assets/images/home/CoffeeBrake2.webp">
 		<div class="p-4 home-desc">
-	 		<h4 class="ala-font mb-3">Project Description</h4>
-			<p class="mb-0">'Coffee Brake' is a short animation project created by the Master of Animation and Visualisation students at the UTS Animal Logic Academy. The film was developed and produced in only 10 weeks as part of the emerging visualisation technologies project using the animation software 'Blender' and 'Grease Pencil'.</p>
+	 		<h4 class="ala-font mb-3">Description</h4>
+			<p class="mb-0">‘Coffee Brake’ is a short animation project created by the Master of Animation and Visualisation students at the UTS Animal Logic Academy. The film was developed and produced in only 10 weeks as part of the emerging visualisation technologies project using the animation software ‘Blender’ and ‘Grease Pencil’.</p>
 		</div>
 	</div>
 </div>
