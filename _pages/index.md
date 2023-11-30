@@ -14,7 +14,7 @@ permalink: /
 			<h1 class="ala-font mb-4" style="font-size: 6rem;">Welcome</h1>
 			<h4 class="ala-font2" style="margin-bottom: 12rem;">2023 Student Showcase</h4>
 		</div>
-		<div class="row mt-5 mx-3">
+		<div class="row mt-5 ms-3 me-2">
 			<div class="col-8">
 				<p>This year's <i>Donuts & Droids</i> showcase highlights our incredible short films <i>Alone</i> and <i>Coffee Break</i>. A sincere thank you to our staff for helping all the students cross the finish line and never feel Alone during the process. We hope you enjoy the showcase and take the chance to check out our graduates' work!</p>
 				<p>We would like to acknowledge the Gadigal people of the Eora Nation upon whose ancestral lands our city campus now stands. We would also like to pay respect to the Elders both past and present, acknowledging them as the traditional custodians of knowledge for this land.</p>
