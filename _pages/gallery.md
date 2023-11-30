@@ -99,9 +99,9 @@ title: "Gallery"
 			},
 			getImageSize: function(lastWindowWidth) {
 				if (lastWindowWidth <= 640) {
-					return 100; // Phones
+					return 200; // Phones
 				} else if (lastWindowWidth <= 1920) {
-					return 250;// Tablets and latops
+					return 200;// Tablets and latops
 				} else {
 					return 500; // Large desktops
 				}
