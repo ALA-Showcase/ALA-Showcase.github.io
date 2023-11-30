@@ -41,6 +41,11 @@ a {
   font-family: "NB International";
 }
 
+.top-bg {
+  background-size: cover;
+  background-position: top;
+}
+
 .home-bg {
   background-attachment: fixed;
   background-size: cover;
@@ -50,6 +55,11 @@ a {
 .home-desc {
   background: #00000090;
   border-radius: 0 0 1rem 1rem;
+}
+
+.home-gold {
+  font-family: "DIN";
+  color: #ffb000;
 }
 
 /* Move zoom control to right */

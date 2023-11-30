@@ -3,24 +3,23 @@ layout: default
 title: "Home"
 permalink: /
 ---
-<div class="py-5 bg-black">
+<div class="pt-5 top-bg" style="background-image: url('/assets/images/home/Lights.webp');">
 	<div class="container">
 		<div class="d-flex justify-content-center gap-3">
 			<img src="/assets/images/home/UTS_Logo.webp" height="32">
 			<img src="/assets/images/home/AL_Logo.webp" height="32">
 		</div>
-		<div class="text-center" style="margin-top: 12rem;">
-			<h4 class="ala-font2 mb-4">UTS Animal Logic Academy Presents</h4>
+		<div class="text-center" style="margin-top: 8rem;">
 			<h1 class="ala-font mb-4" style="font-size: 6rem;">Welcome</h1>
-			<h4 class="ala-font2" style="margin-bottom: 12rem;">2023 Student Showcase</h4>
+			<h4 class="ala-font2" style="margin-bottom: 6rem;">To The ALA 2023 Showcase!</h4>
 		</div>
-		<div class="row mt-5 ms-3 me-2">
-			<div class="col-8">
-				<p>This year's <i>Donuts & Droids</i> showcase highlights our incredible short films <i>Alone</i> and <i>Coffee Break</i>. A sincere thank you to our staff for helping all the students cross the finish line and never feel Alone during the process. We hope you enjoy the showcase and take the chance to check out our graduates' work!</p>
-				<p>We would like to acknowledge the Gadigal people of the Eora Nation upon whose ancestral lands our city campus now stands. We would also like to pay respect to the Elders both past and present, acknowledging them as the traditional custodians of knowledge for this land.</p>
+		<div class="row mt-5 mx-2">
+			<div class="col-md align-self-center mb-5" style="font-size: 1.2rem;">
+				<p>This year's <span class="home-gold">Donuts & Droids</span> showcase features our latest short films <span class="home-gold">Alone</span> and <span class="home-gold">Coffee Break</span>. We hope you enjoy the showcase and take the opportunity to check out our graduates' work!</p>
+				<p>We would like to acknowledge the Gadigal people of the Eora Nation upon whose ancestral lands our city campus stands. We pay respect to the Elders, acknowledging them as the traditional custodians of this land.</p>
 			</div>
-			<div class="col">
-				<img class="w-100" src="/assets/images/home/AloneDonut.webp">
+			<div class="col-md align-self-end">
+				<img class="w-100" src="/assets/images/home/AloneDonut_Cropped.webp">
 			</div>
 		</div>
 	</div>
