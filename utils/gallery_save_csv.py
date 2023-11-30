@@ -27,7 +27,7 @@ with open("gallery.csv", "w", newline="") as file:
 
 		if f.endswith(".webp"):
 			# Skip proxies, hardcoded for now
-			if f.endswith("_s20.webp") or f.endswith("_s500.webp"):
+			if f.endswith("_s20.webp") or f.endswith("_s100.webp") or f.endswith("_s200.webp") or f.endswith("_s500.webp"):
 				continue
 
 			print(f)

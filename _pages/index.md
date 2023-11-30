@@ -10,7 +10,7 @@ permalink: /
 			<img src="/assets/images/home/AL_Logo.webp" height="32">
 		</div>
 		<div class="text-center" style="margin-top: 8rem;">
-			<h1 class="ala-font mb-4" style="font-size: min(20vw, 7rem);">Welcome</h1>
+			<h1 class="ala-font mb-3" style="font-size: min(20vw, 7rem);">Welcome</h1>
 			<h4 class="ala-font2" style="margin-bottom: 6rem;">To The 2023 Showcase!</h4>
 		</div>
 		<div class="row mt-5 mx-2">

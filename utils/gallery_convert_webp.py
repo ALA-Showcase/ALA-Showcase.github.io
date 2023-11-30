@@ -18,8 +18,8 @@ for f in glob.glob("../assets/images/artbook/**/*.*", recursive=True):
 
 			folders = str(path.parent)
 			name = path.stem
+			
 			new_path = folders + os.sep + name
-
 			if new_height == 8192:
 				new_path += ".webp"
 			else:
