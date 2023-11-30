@@ -15,7 +15,7 @@ permalink: /
 		</div>
 		<div class="row mt-5 mx-2">
 			<div class="col-md align-self-center mb-5 text-hack">
-				<p>This year's <span class="home-gold ala-font">Donuts & Droids</span> showcase features our latest short films <span class="home-gold ala-font">Alone</span> and <span class="home-gold ala-font">Coffee Break</span>. We hope you enjoy the showcase and take the opportunity to check out our graduates' work!</p>
+				<p>This year's <span class="home-gold ala-font">Donuts & Droids</span> showcase features our latest short films <a class="home-gold ala-font" href="#alone">Alone</a> and <a class="home-gold ala-font" href="#coffeebrake">Coffee Break</a>. We hope you enjoy the showcase and take the opportunity to check out our graduates' work!</p>
 				<p>We would like to acknowledge the Gadigal people of the Eora Nation upon whose ancestral lands our city campus stands. We pay respect to the Elders, acknowledging them as the traditional custodians of this land.</p>
 			</div>
 			<div class="col-md align-self-end">
@@ -25,7 +25,7 @@ permalink: /
 	</div>
 </div>
 
-<div class="py-5 home-bg" style="background-image: url('/assets/images/home/Alone_BG.webp');">
+<div id="alone" class="py-5 home-bg" style="background-image: url('/assets/images/home/Alone_BG.webp');">
 	<div class="container">
 		<div class="d-flex justify-content-center mb-5">
 			<img class="w-75" src="/assets/images/home/Alone_Title.webp">
@@ -43,7 +43,7 @@ permalink: /
 	</div>
 </div>
 
-<div class="py-5 home-bg" style="background-image: url('/assets/images/home/CoffeeBrake_BG.webp');">
+<div id="coffeebrake" class="py-5 home-bg" style="background-image: url('/assets/images/home/CoffeeBrake_BG.webp');">
 	<div class="container">
 		<div class="d-flex justify-content-center mb-5">
 			<img class="w-75" src="/assets/images/home/CoffeeBrake_Title.webp" style="filter: drop-shadow(0.4rem 0.4rem 0 black);">

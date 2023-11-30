@@ -61,6 +61,10 @@ a {
   color: #ffb000;
 }
 
+a.home-gold:hover {
+  color: white;
+}
+
 /* Move zoom control to right */
 .ol-zoom {
   left: unset !important;
