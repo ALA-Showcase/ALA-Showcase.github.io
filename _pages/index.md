@@ -60,3 +60,8 @@ permalink: /
 		</div>
 	</div>
 </div>
+
+<div class="d-block d-md-none text-center pt-5 pb-4">
+	<div>Use the buttons below to navigate the website.</div>
+	<i class="bi bi-arrow-down" style="font-size: 3rem;"></i>
+</div>
